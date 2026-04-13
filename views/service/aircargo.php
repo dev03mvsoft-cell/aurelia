@@ -1,4 +1,5 @@
-<?php include(__DIR__ . '/../../component/header.php'); ?>
+<?php defined('SECURE_ACCESS') or die('Direct access not allowed'); ?>
+<?php echo include(__DIR__ . '/../../component/header.php'); ?>
 
 <main class="main">
 

@@ -1,3 +1,4 @@
+<?php defined('SECURE_ACCESS') or die('Direct access not allowed'); ?>
 <?php include(__DIR__ . '/../../component/header.php'); ?>
 
 <main class="main">

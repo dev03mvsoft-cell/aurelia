@@ -1,4 +1,5 @@
-  <style>
+  <?php defined('SECURE_ACCESS') or die('Direct access not allowed'); ?>
+<style>
 
     /* Loader Wrapper */
     .full-screen {

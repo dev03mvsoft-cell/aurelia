@@ -18,9 +18,10 @@ $routes = [
     '' => 'views/index.php',
     '/contact' => 'views/contact.php',
     '/about' => 'views/about.php',
+    '/leadership' => 'views/leadership.php',
     '/careers' => 'views/carrer.php',
     '/corporate-social-responsibility' => 'views/csr.php',
-    
+
     // Services
     '/services/air-cargo' => 'views/service/aircargo.php',
     '/services/custom-clearance' => 'views/service/CustomClearance.php',

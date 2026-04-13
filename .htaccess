@@ -2,8 +2,13 @@ RewriteEngine On
 
 # 1. Protect Sensitive Files
 <FilesMatch "^\.(htaccess|htpasswd|env|ini|log|sh|inc|swp|bak)$">
-    Order allow,deny
-    Deny from all
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # 2. Prevent Directory Listing
@@ -36,6 +41,10 @@ RewriteRule .* - [F,L]
 # 7. Block Trace and Track Methods
 RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* - [F]
+
+# 8. Strongly Block Access to .env via Rewrite
+RewriteRule ^\.env - [F,L]
+RewriteRule \.env$ - [F,L]
 
 # Redirect to index.php
 RewriteCond %{REQUEST_FILENAME} !-f

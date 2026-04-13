@@ -18,7 +18,8 @@ $currentURL = $baseURL . $_SERVER['REQUEST_URI'];
 $ogImage = $baseURL . '/assets/image/logo/2.png';
 
 // Asset linking function
-function base_url($path = '') {
+function base_url($path = '')
+{
     global $baseURL;
     return $baseURL . ltrim($path, '/');
 }
@@ -56,15 +57,15 @@ function base_url($path = '') {
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <!-- Vendor CSS Files -->
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
     <!-- Main CSS File -->
     <link href="/assets/css/main.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -77,13 +78,13 @@ function base_url($path = '') {
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-  
-      
+
+
     </style>
 </head>
 
 <body class="index-page">
- <?php include('./views/loader.php')?>
+    <?php include('./views/loader.php') ?>
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -97,6 +98,7 @@ function base_url($path = '') {
                 <ul>
                     <li><a href="/" class="">Home</a></li>
                     <li><a href="/about">About</a></li>
+                    <li><a href="/leadership">Leadership</a></li>
                     <li class="dropdown"><a href="#"><span>Services</span> <i class=" toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="/services/freight-forwarding">Freight Forwarding</a></li>
@@ -108,8 +110,8 @@ function base_url($path = '') {
 
                         </ul>
                     </li>
-                  
-                
+
+
                     <li><a href="/corporate-social-responsibility">CSR</a></li>
                     <li><a href="/careers">Career</a></li>
                     <li><a href="/contact">Contact</a></li>

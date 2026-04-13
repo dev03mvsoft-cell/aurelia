@@ -1,3 +1,4 @@
+<?php defined('SECURE_ACCESS') or die('Direct access not allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 

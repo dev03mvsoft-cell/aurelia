@@ -1,6 +1,7 @@
+<?php defined('SECURE_ACCESS') or die('Direct access not allowed'); ?>
 <?php include(__DIR__ . '/../component/header.php'); ?>
 
-<link href="assets/css/main.css" rel="stylesheet">
+
 
 <main class="main">
 
@@ -147,7 +148,7 @@
 
         <div class="col-lg-4 order-lg-2 order-1">
           <div class="service-sidebar" data-aos="fade-left">
-
+            <!-- 
             <div class="testimonial-card mb-4" data-aos="zoom-in" data-aos-delay="100">
               <div class="testimonial-header">
                 <i class="bi bi-quote"></i>
@@ -162,7 +163,7 @@
                   <span>Director</span>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="service-features-list" data-aos="fade-up">
               <h4>Core Logistics Modes</h4>
@@ -350,82 +351,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-center mt-5" data-aos="fade-up">
-                  <div class="col-lg-11">
-                    <div class="executive-profile-box p-0 rounded-4 overflow-hidden shadow-lg border-0 mb-5">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <div class="profile-image-container h-100" style="min-height: 350px; background: url('/assets/image/home/aurila13.png') center/cover no-repeat;">
-                          </div>
-                        </div>
-                        <div class="col-md-8 p-4 p-lg-5 d-flex flex-column justify-content-center">
-                          <div class="mb-3">
-                            <span class="badge px-3 py-2 mb-3" style="background: rgba(var(--accent-color-rgb), 0.1); color: var(--accent-color); font-weight: 600; letter-spacing: 1px;">MANAGEMENT SPOTLIGHT</span>
-                            <h2 class="fw-bold mb-1" style="color: var(--nav-color);">Mr. Rohit Rao</h2>
-                            <h6 class="text-uppercase fw-semibold" style="color: var(--accent-color);">Director</h6>
-                          </div>
-
-                          <p class=" mb-4" style="line-height: 1.6;">
-                            Mr. Rohit Rao serves as Director at Aurelia Shipping Line Pvt. Ltd. and brings over five years of hands-on experience in the shipping and logistics industry. He possesses strong operational expertise in managing complex, sensitive, and high-value cargo, including project shipments and Over Dimensional Cargo (ODC). His practical knowledge of port operations, cargo handling techniques, and regulatory procedures enables him to execute challenging assignments with precision and efficiency.
-                          </p>
-                          <p class="mb-4" style="line-height: 1.6;">
-                            He plays a crucial role in planning and supervising specialized movements involving heavy machinery, oversized equipment, and time-sensitive consignments, ensuring strict adherence to safety standards and statutory compliance.
-                          </p>
-
-
-                          <div class="mt-4 d-flex align-items-center">
-                            <div class="me-4">
-                              <span class="d-block fw-bold   mb-0">Expertise:</span>
-                              <span class="small ">Operational Logistics • Project Cargo (ODC) • Port Operations</span>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="executive-profile-box p-0 rounded-4 overflow-hidden shadow-lg border-0">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <div class="profile-image-container h-100" style="min-height: 350px; background: url('/assets/image/fonder/pankajsharma.jpg') center/cover no-repeat;">
-                          </div>
-                        </div>
-                        <div class="col-md-8 p-4 p-lg-5 d-flex flex-column justify-content-center">
-                          <div class="mb-3">
-                            <span class="badge px-3 py-2 mb-3" style="background: rgba(var(--accent-color-rgb), 0.1); color: var(--accent-color); font-weight: 600; letter-spacing: 1px;">MANAGEMENT SPOTLIGHT</span>
-                            <h2 class="fw-bold mb-1" style="color: var(--nav-color);">Mr. Pankaj Sharma</h2>
-                            <h6 class="text-uppercase fw-semibold" style="color: var(--accent-color);">Managing Director (Chartered Accountant)</h6>
-                          </div>
-
-                          <p class=" mb-4" style="line-height: 1.6;">
-                            Mr. Pankaj Sharma, a qualified Chartered Accountant, serves as the Managing Director of Aurelia Shipping Line Pvt. Ltd. With specialized experience in the shipping and logistics industry, he brings strong expertise in freight pricing, operational management, and financial strategy. His professional background enables the company to maintain well-structured pricing models, optimize cost efficiency, and implement disciplined financial controls across operations.
-                          </p>
-                          <p class="mb-4" style="line-height: 1.6;">
-                            As Managing Director, he plays a key role in strategic planning, business development, and compliance management, ensuring that Aurelia operates with transparency, precision, and sustainable growth. His analytical approach, industry insight, and focus on operational excellence contribute significantly to strengthening the company's competitive positioning and long-term expansion in the international logistics sector.
-                          </p>
-
-
-                          <div class="mt-4 d-flex align-items-center">
-                            <div class="me-4">
-                              <span class="d-block fw-bold   mb-0">Expertise:</span>
-                              <span class="small ">Financial Strategy • Freight Pricing • Strategic Planning</span>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
 </main>
+
 
 <?php include(__DIR__ . '/../component/footer.php'); ?>

@@ -160,11 +160,55 @@ include('./component/header.php')
   width: auto;
   object-fit: contain;
 }
+    /* 7. BUBBLE ANIMATION */
+    .hero.section.canvas {
+        position: relative;
+    }
+    
+    .canvas#canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .bubble {
+        position: absolute;
+        bottom: -150px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3),
+                    0 10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 0;
+        filter: blur(1px);
+    }
+
+
+    @keyframes move-bubbles {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.8;
+        }
+        90% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(var(--move-y)) translateX(var(--move-x));
+            opacity: 0;
+        }
+    }
 
 </style>
 <main class="main">
     <!-- Hero Section -->
-    <section id="hero canvas" class="hero section canvas">
+    <section id="hero" class="hero section canvas">
         <div class="canvas" id="canvas">
             <div class="container ">
 
