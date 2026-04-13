@@ -15,7 +15,7 @@
                 </a>
                 <p>We specialize in end-to-end logistics solutions across air, sea, and land, ensuring timely, secure, and refined service for all your cargo needs.</p>
                 <div class="social-links d-flex mt-4">
-                    <a href="#" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+                    <a href="#" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
                     <a href="#" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
                     <a href="#" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
                     <a href="#" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
