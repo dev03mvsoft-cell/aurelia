@@ -239,7 +239,7 @@ include('./component/header.php');
                         <div class="divider"></div>
 
                         <div class="description">
-                            <p>Aurelia Shipping Line Pvt. Ltd. redefines global cargo movement with precision, reliability, and a commitment to seamless logistics. From complex freight forwarding to specialized cargo handling, we deliver solutions engineered for businesses that demand excellencee.</p>
+                            <p>Aurelia Shipping Line Pvt. Ltd. redefines global cargo movement with precision, reliability, and a commitment to seamless logistics. From complex freight forwarding to specialized cargo handling, we deliver solutions engineered for businesses that demand excellence.</p>
                         </div>
 
                         <div class="cta-button">
