@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /component/
+Disallow: /PHPMailer/
+Disallow: /uploads/
+Disallow: /views/
+
+Sitemap: https://aurelia.com/sitemap.xml
