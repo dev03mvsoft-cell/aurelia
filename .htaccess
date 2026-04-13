@@ -1,0 +1,54 @@
+RewriteEngine On
+
+# 1. Protect Sensitive Files
+<FilesMatch "^\.(htaccess|htpasswd|env|ini|log|sh|inc|swp|bak)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. Prevent Directory Listing
+Options -Indexes
+
+# 3. Disable Server Signature
+ServerSignature Off
+
+# 4. Security Headers
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Content-Security-Policy "upgrade-insecure-requests"
+    Header set Permissions-Policy "geolocation=(), megaphone=(), camera=(), microphone=()"
+</IfModule>
+
+# 5. Protect Uploads Directory from Script Execution
+<Directory "uploads">
+    RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .phps .pl .py .jsp .asp .sh .cgi
+    Options -ExecCGI
+    AllowOverride None
+</Directory>
+
+# 6. Block Malicious User Agents (Basic Protection)
+RewriteCond %{HTTP_USER_AGENT} (libwww-perl|curl|python|nikto|scan|sqlmap|w3af|nmap) [NC]
+RewriteRule .* - [F,L]
+
+# 7. Block Trace and Track Methods
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+
+# Redirect to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [L,QSA]
+
+# Enable caching for static files
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
